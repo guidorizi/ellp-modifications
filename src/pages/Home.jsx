@@ -1,30 +1,32 @@
-import ProximosEventos from './ProximosEventos';
-import VoluntariosSection from './VoluntariosSection';
-import styles from './Home.module.css';
+import React from "react";
+import ProximosEventos from "./ProximosEventos";
+import VoluntariosResumo from "./VoluntariosResumo";
+import styles from "./Eventos.module.css";
 
-function Home() {
+export default function Home() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <a href="#eventos" className={styles.link}>
-          <div className={styles.menuItem}><h2>EVENTOS</h2></div>
-        </a>
-        <a href="#voluntarios" className={styles.link}>
-          <div className={styles.menuItem}><h2>VOLUNTÁRIOS</h2></div>
-        </a>
+    <div className={styles.homeContainer}>
+      <header className={styles.header}>
+        <h1 className={styles.mainTitle}>ELLP</h1>
+        <nav className={styles.nav}>
+          <a href="/eventos" className={styles.navLink}>EVENTOS</a>
+          <a href="/voluntarios" className={styles.navLink}>VOLUNTÁRIOS</a>
+        </nav>
+      </header>
+
+      <main>
+        <section className={styles.section}>
+          <ProximosEventos />
+        </section>
+
+        <section className={styles.section}>
+          <VoluntariosResumo />
+        </section>
       </main>
 
-      <h1 className={styles.brand}>ELLP</h1>
-
-      <section id="eventos" className={styles.section}>
-        <ProximosEventos />
-      </section>
-
-      <section id="voluntarios" className={styles.section}>
-        <VoluntariosSection />
-      </section>
+      <footer className={styles.footer}>
+        <p>Made with Manus Create my website</p>
+      </footer>
     </div>
   );
 }
-
-export default Home;
