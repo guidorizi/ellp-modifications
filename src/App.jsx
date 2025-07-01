@@ -7,13 +7,13 @@ import Voluntarios from "./pages/VoluntariosSection";
 function App() {
   return (
    <Router basename="/ellp-modifications/">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/eventos" element={<Eventos />} />
-        <Route path="/eventos/:id" element={<EventosEspecificos />} />
-        <Route path="/voluntarios" element={<Voluntarios />} />
-      </Routes>
-    </Router>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/eventos" element={<Eventos />} />
+    <Route path="/eventos/:id" element={<EventosEspecificos />} />
+    <Route path="/voluntarios" element={<Voluntarios />} />
+  </Routes>
+</Router>  
   );
 }
 
