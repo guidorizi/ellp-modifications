@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://guidorizi.github.io/certificadora2/",
+"homepage": "https://guidorizi.github.io/ellp-modifications/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
