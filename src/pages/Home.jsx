@@ -1,4 +1,4 @@
-import EventosSection from './EventosSection';
+import ProximosEventos from './ProximosEventos';
 import VoluntariosSection from './VoluntariosSection';
 import styles from './Home.module.css';
 
@@ -17,7 +17,7 @@ function Home() {
       <h1 className={styles.brand}>ELLP</h1>
 
       <section id="eventos" className={styles.section}>
-        <EventosSection />
+        <ProximosEventos />
       </section>
 
       <section id="voluntarios" className={styles.section}>
