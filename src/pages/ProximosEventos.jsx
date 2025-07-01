@@ -1,72 +1,64 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from './Eventos.module.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "./ProximosEventos.module.css";
 
 const proximosEventos = [
   {
     id: 1,
     titulo: "Trabalho",
-    descricao: "Pessoas trabalhando",
-    imagem: "https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=1170&auto=format&fit=crop",
+    descricao: "Pessoas trabalhando em equipe, compartilhando ideias e produtividade no ambiente profissional.",
+    imagem: "https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Work",
-    data: "2025-01-15"
+    data: "12/03/2025",
+    local: "São Paulo - SP",
+    participantes: 50,
+    coffee: true,
+    gratuito: true,
   },
   {
     id: 2,
     titulo: "Feira de Inovação Tecnológica",
-    descricao: "Exposição de tecnologia",
+    descricao: "Exposição de novas tecnologias, startups e soluções inovadoras para o mercado.",
     imagem: "https://images.unsplash.com/photo-1551836022-d5d88e9218df",
     categoria: "Tecnologia",
-    data: "2025-01-20"
+    data: "15/03/2025",
+    local: "Campinas - SP",
+    participantes: 100,
+    coffee: false,
+    gratuito: false,
   },
   {
-    id: 3,
+  id: 3,
     titulo: "Encontro Gastronômico",
-    descricao: "Feira de comida",
+    descricao: "Feira de comidas típicas e internacionais para todos os gostos.",
     imagem: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0",
     categoria: "Culinária",
-    data: "2025-01-25"
-  }
+    data: "20/03/2025",
+    local: "Curitiba - PR",
+    participantes: 75,
+    coffee: false,
+    gratuito: true,
+  },
 ];
 
-export default function ProximosEventos() {
+export default function ProximosEventos( ) {
   return (
-    <div className={styles.eventoContainer}>
+    <div className={styles.container}>
       <h2>Próximos Eventos</h2>
-      <div style={{ display: 'grid', gap: '1rem', marginBottom: '2rem' }}>
-        {proximosEventos.map(evento => (
-          <div key={evento.id} style={{ 
-            display: 'flex', 
-            gap: '1rem', 
-            padding: '1rem', 
-            border: '1px solid #ddd', 
-            borderRadius: '8px',
-            alignItems: 'center'
-          }}>
-            <img 
-              src={evento.imagem} 
-              alt={evento.titulo} 
-              style={{ 
-                width: '100px', 
-                height: '100px', 
-                objectFit: 'cover', 
-                borderRadius: '8px' 
-              }} 
-            />
-            <div>
-              <h3>{evento.titulo}</h3>
-              <p>{evento.descricao}</p>
-              <p><strong>Categoria:</strong> {evento.categoria}</p>
-              <p><strong>Data:</strong> {evento.data}</p>
-            </div>
+      {proximosEventos.map((evento) => (
+        <div key={evento.id} className={styles.eventoCard}>
+          <img src={evento.imagem} alt={evento.titulo} className={styles.eventoImagem} />
+          <div className={styles.eventoInfo}>
+            <h3>{evento.titulo}</h3>
+            <p>{evento.descricao}</p>
+            <p><strong>Categoria:</strong> {evento.categoria}</p>
+            <p><strong>Data:</strong> {evento.data}</p>
           </div>
-        ))}
-      </div>
-      
-      <Link to="/eventos" className={styles.pageButton}>
+        </div>
+      ))}
+      <Link to="/eventos" className={styles.verTodosButton}>
         Ver Todos os Eventos
       </Link>
     </div>
   );
 }
-
