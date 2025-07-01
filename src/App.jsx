@@ -6,7 +6,7 @@ import Voluntarios from "./pages/VoluntariosSection";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/ellp-modifications/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/eventos" element={<Eventos />} />
