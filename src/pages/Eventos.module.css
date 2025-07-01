@@ -18,25 +18,24 @@
 h1 {
   color: #333;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
   color: #555;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 p {
   color: #666;
   line-height: 1.6;
-  margin-bottom: 0.8rem;
 }
 
 .pageButton {
   background-color: #007bff;
   color: white;
+  padding: 0.75rem 1.5rem;
   border: none;
-  padding: 0.75rem 1.25rem;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
@@ -50,15 +49,15 @@ p {
 /* Estilos para botões de voltar */
 .voltarButton {
   display: inline-block;
-  background-color: #6c757d;
+  background-color: #007bff;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 0.9rem;
+  margin-top: 1rem;
   transition: background-color 0.3s ease;
 }
 
 .voltarButton:hover {
-  background-color: #5a6268;
+  background-color: #0056b3;
 }
